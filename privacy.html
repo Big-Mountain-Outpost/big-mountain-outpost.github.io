@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DateDots — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6;
+         color: #222; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { color: #144472; border-bottom: 3px solid #26C5B4; padding-bottom: 8px; }
+  h2 { color: #144472; margin-top: 2em; }
+  h3 { color: #1a5a8a; }
+  a { color: #1a7a6e; }
+  blockquote { border-left: 4px solid #26C5B4; margin: 1em 0; padding: 4px 16px;
+               background: #f2fafa; }
+  .updated { color: #666; font-style: italic; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+</style>
+</head>
+<body>
+
+<h1>DateDots — Privacy Policy</h1>
+<p class="updated">Last updated: June 12, 2026</p>
+
+<p>This Privacy Policy explains what data the DateDots app ("DateDots", "the
+app", "we") collects, how it is used, and how it is stored. By using DateDots
+you agree to the terms below.</p>
+
+<hr>
+
+<h2>1. What we collect</h2>
+
+<h3>1.1 Data stored on your device</h3>
+<p>DateDots saves the following information locally on your phone:</p>
+<ul>
+  <li>The alarms you create (time, label, sound choice, repeat days, snooze
+      preferences, vibrate toggle, group assignment).</li>
+  <li>The alarm groups ("routines") you create (name, color, shape, shared
+      sound, sort order).</li>
+  <li>The prep alarm sets you create (offsets, names, sound choices) and the
+      calendar dates and event times you assign to routines and prep sets.</li>
+  <li>Your app settings (theme, 24-hour toggle, default sound, calendar first
+      day, inactivity timeout, pre-alarm minutes, schedule reminder), and an
+      optional "your name" value used only to match your own shifts when
+      importing a schedule.</li>
+</ul>
+<p>This local data never leaves your device unless you sign in (see §1.2).</p>
+
+<h3>1.1a Importing a schedule (spreadsheet or device calendar)</h3>
+<p>DateDots can create prep alarms by importing a spreadsheet you choose, or by
+reading events from your device's calendar (with your permission). This
+processing happens entirely on your device: the imported events and any names
+in them are used only to build the alarms you confirm, are held in memory
+during the import, and are <strong>not uploaded to the cloud or sold or
+shared</strong>. DateDots reads your calendar but never writes to or modifies
+it.</p>
+
+<h3>1.2 Data stored in the cloud (when you sign in with Google)</h3>
+<p>If you sign in to DateDots with your Google account, the same alarm,
+routine, prep-alarm, calendar-date, and settings information described in §1.1
+is also stored in <strong>Google Cloud Firestore</strong> under your private
+user document. This sync runs through <strong>Firebase Authentication</strong>
+and <strong>Cloud Firestore</strong>, both operated by Google.</p>
+<p>To enable this, Google Sign-In additionally provides DateDots with:</p>
+<ul>
+  <li>Your Google account ID (a unique identifier).</li>
+  <li>Your name as registered with Google.</li>
+  <li>The email address tied to your Google account.</li>
+  <li>A URL pointing to your Google profile photo, if you have one.</li>
+</ul>
+<p>These four items are used to display your account in the app's Settings
+screen and to identify your private Firestore document. They are never sold,
+transferred to third-party advertising networks, or used for any purpose other
+than authenticating you and syncing your DateDots data.</p>
+
+<h3>1.3 Data we do NOT collect</h3>
+<p>DateDots does not collect, request, or store:</p>
+<ul>
+  <li>Your location.</li>
+  <li>Your contacts, photos, or files outside the app's own data.</li>
+  <li>Your microphone or camera input.</li>
+  <li>Browser history or other app usage.</li>
+  <li>Advertising identifiers.</li>
+</ul>
+<p>DateDots does not contain advertising and does not include third-party
+analytics or tracking SDKs.</p>
+
+<hr>
+
+<h2>2. Who has access to your data</h2>
+<ul>
+  <li><strong>You:</strong> through the app itself and via your Google
+      account.</li>
+  <li><strong>Google:</strong> as the operator of Firebase Authentication and
+      Cloud Firestore, Google processes your data on our behalf. Google's own
+      privacy practices apply to that processing — see
+      <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+  <li><strong>DateDots developer:</strong> the developer can technically access
+      aggregate Firestore usage metrics through the Firebase console but does
+      not access individual users' alarm content for any purpose.</li>
+</ul>
+<p>DateDots does not share, sell, rent, or transfer your data to third parties
+for advertising, marketing, or analytics.</p>
+
+<hr>
+
+<h2>3. How long we keep your data</h2>
+<ul>
+  <li><strong>On-device data:</strong> kept until you delete the app or clear
+      its data.</li>
+  <li><strong>Cloud data:</strong> kept until you delete your alarms / groups
+      in the app, or request account deletion (see §5).</li>
+</ul>
+
+<hr>
+
+<h2>4. Children's privacy</h2>
+<p>DateDots is not directed to children under 13 (or the equivalent minimum
+age in your jurisdiction). We do not knowingly collect information from
+children. If you believe a child has signed in with their Google account,
+contact us at <a href="mailto:pchyang300@gmail.com">pchyang300@gmail.com</a>
+and we will remove the associated data.</p>
+
+<hr>
+
+<h2>5. Your rights</h2>
+<p>You can:</p>
+<ul>
+  <li>View all your data inside the app.</li>
+  <li>Edit or delete individual alarms, groups, and calendar assignments
+      through the app's UI; these changes propagate to the cloud copy.</li>
+  <li>Sign out at any time from Settings → Account. Sign-out stops further
+      sync but does not by itself delete cloud data.</li>
+  <li><strong>Delete your account and all cloud data at any time</strong> from
+      Settings → Account → "Delete account &amp; data". This permanently
+      removes your Firestore data and your authentication account. (Alarms
+      saved on the device itself remain until you uninstall or clear the app's
+      data.)</li>
+  <li>Alternatively, request deletion by emailing
+      <a href="mailto:pchyang300@gmail.com">pchyang300@gmail.com</a> from the
+      Google account in question. Deletion is performed within 30 days.</li>
+</ul>
+<p>Depending on where you live, additional rights may apply (e.g., GDPR data
+portability, CCPA right to know / opt out). Email
+<a href="mailto:pchyang300@gmail.com">pchyang300@gmail.com</a> to exercise
+these.</p>
+
+<hr>
+
+<h2>6. Security</h2>
+<p>Data in transit between the app and Firebase is encrypted using TLS. Data
+at rest in Firestore is encrypted by Google. No system is perfectly secure,
+and DateDots cannot guarantee against unauthorized access or breach.</p>
+
+<hr>
+
+<h2>7. Changes to this policy</h2>
+<p>We may update this policy from time to time. Material changes will be
+reflected in the app's About screen and the "Last updated" date at the top of
+this document. Continuing to use the app after a change constitutes
+acceptance.</p>
+
+<hr>
+
+<h2>8. Contact</h2>
+<p>For privacy questions or data-deletion requests, contact:</p>
+<blockquote><a href="mailto:pchyang300@gmail.com">pchyang300@gmail.com</a></blockquote>
+
+</body>
+</html>
