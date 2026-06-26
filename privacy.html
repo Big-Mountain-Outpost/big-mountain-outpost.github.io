@@ -20,7 +20,7 @@
 <body>
 
 <h1>DateDots — Privacy Policy</h1>
-<p class="updated">Last updated: June 21, 2026</p>
+<p class="updated">Last updated: June 25, 2026</p>
 
 <p>DateDots is operated by <strong>Big Mountain Outpost, LLC</strong> ("Big
 Mountain Outpost", "we"). This Privacy Policy explains what data the DateDots
@@ -76,8 +76,9 @@ edits, or deletes calendar events.</p>
 <p>If you sign in to DateDots with your Google account, the same alarm,
 routine, timeline, calendar-date, and settings information described in §1.1
 is also stored in <strong>Google Cloud Firestore</strong> under your private
-user document. This sync runs through <strong>Firebase Authentication</strong>
-and <strong>Cloud Firestore</strong>, both operated by Google.</p>
+user document, which is keyed by your Google account ID. This sync runs through
+<strong>Firebase Authentication</strong> and <strong>Cloud Firestore</strong>,
+both operated by Google.</p>
 <p>To enable this, Google Sign-In additionally provides DateDots with:</p>
 <ul>
   <li>Your Google account ID (a unique identifier).</li>
@@ -85,10 +86,23 @@ and <strong>Cloud Firestore</strong>, both operated by Google.</p>
   <li>The email address tied to your Google account.</li>
   <li>A URL pointing to your Google profile photo, if you have one.</li>
 </ul>
-<p>These four items are used to display your account in the app's Settings
-screen and to identify your private Firestore document. They are never sold,
-transferred to third-party advertising networks, or used for any purpose other
-than authenticating you and syncing your DateDots data.</p>
+<p>Your name, email address, and profile photo URL are held by
+<strong>Firebase Authentication</strong> (they are not written into your
+Firestore content); your Google account ID identifies your private Firestore
+document. These four items are used only to display your account in the app's
+Settings screen and to identify your data. They are never sold, transferred to
+third-party advertising networks, or used for any purpose other than
+authenticating you and syncing your DateDots data.</p>
+
+<h3>1.2a Purchase records (DateDots Pro)</h3>
+<p>If you buy <strong>DateDots Pro</strong> while signed in, our server verifies
+the purchase with Google Play and stores a small entitlement record in Cloud
+Firestore tied to your account. That record contains your Pro status, the Google
+Play <strong>order ID</strong>, and the <strong>purchase token</strong> — used to
+recognize your Pro unlock across your devices and to protect it against
+tampering. <strong>We never receive or store your payment-card details</strong>;
+Google Play processes the payment (see §1.3). This entitlement record is deleted
+when you delete your account (see §5).</p>
 
 <h3>1.3 Data we do NOT collect</h3>
 <p>DateDots does not collect, request, or store:</p>
@@ -104,6 +118,9 @@ than authenticating you and syncing your DateDots data.</p>
 </ul>
 <p>DateDots does not contain advertising and does not include third-party
 analytics or tracking SDKs.</p>
+<p>To operate Firebase, Google may assign a Firebase installation identifier to
+your copy of the app. We do not use it for advertising or to track you across
+other apps or websites.</p>
 
 <h3>1.4 Legal basis for processing (GDPR / UK GDPR)</h3>
 <p>As stated under "Geographic scope," DateDots is not offered to or directed at
