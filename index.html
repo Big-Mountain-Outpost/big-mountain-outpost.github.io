@@ -3,77 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="24ivzJQUXdhwHtNUQLNaCPfen0ZIptC-V7Z3hcdrrp8" />
-<title>Big Mountain Outpost — DateDots</title>
-<meta name="description" content="Big Mountain Outpost builds DateDots, a calendar-first alarm app for Android: schedule alarm routines onto exact dates, build timelines around events, and stay on top of your schedule.">
+<title>DateDots — Alarms that follow your real schedule</title>
+<meta name="description" content="Most alarm apps think in weekdays. DateDots thinks in dates — build routines and schedule them onto the exact calendar days you need.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="datedots-icon.svg" type="image/svg+xml">
 <style>
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0;
-         color: #222; line-height: 1.6; }
-  header { background: linear-gradient(135deg, #144472 0%, #26C5B4 100%);
-           color: #fff; text-align: center; padding: 64px 16px 56px; }
-  header img { width: 160px; height: 160px; }
-  h1 { margin: 16px 0 4px; font-size: 2.4em; }
-  .tagline { font-size: 1.2em; opacity: 0.92; margin: 0; }
-  .studio { font-size: 0.95em; opacity: 0.8; margin-top: 20px; letter-spacing: 0.04em;
-            text-transform: uppercase; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 24px; }
-  h2 { color: #144472; }
-  ul.features { padding-left: 1.2em; }
-  ul.features li { margin: 10px 0; }
-  ul.features b { color: #144472; }
-  .cta { text-align: center; margin: 36px 0; }
-  .cta a { display: inline-block; background: #144472; color: #fff; text-decoration: none;
-           padding: 14px 32px; border-radius: 28px; font-weight: 600; }
-  footer { border-top: 1px solid #e3e3e3; margin-top: 32px; padding: 24px 20px 48px;
-           text-align: center; color: #555; font-size: 0.95em; }
-  footer a { color: #1a7a6e; }
+  /* Page-specific layout only. The visual system lives in assets/site.css. */
+  body { max-width: 800px; }
+  .hero .mark { width: 88px; height: 88px; margin-bottom: 24px; }
+  .hero h1 { font-size: 2.6em; line-height: 1.1; margin-bottom: 10px; }
+  .lede { font-size: 1.15em; color: var(--on-variant); margin: 0; max-width: 34em; }
+  .studio { font-size: 0.82em; color: var(--on-variant); letter-spacing: 0.08em;
+            text-transform: uppercase; margin-top: 22px; }
+  .cards { display: grid; gap: 14px; margin: 30px 0 8px;
+           grid-template-columns: repeat(auto-fit, minmax(228px, 1fr)); }
+  .card { background: var(--container); border: 1px solid var(--hairline);
+          border-radius: 14px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1em; }
+  .card p { margin: 0; color: var(--on-variant); font-size: 0.94em; }
+  .legend { display: flex; gap: 7px; margin-bottom: 12px; }
+  .legend i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .cta { margin: 34px 0 8px; }
+  .cta span { display: inline-block; background: var(--accent-container);
+              color: var(--on-accent-container); padding: 13px 30px;
+              border-radius: 26px; font-weight: 700; }
+  .note { color: var(--on-variant); font-size: 0.9em; margin-top: 14px; }
 </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="DateDots logo">
+<div class="hero">
+  <img class="mark mark-light" src="datedots-mark-on-light.svg" alt="DateDots">
+  <img class="mark mark-dark" src="datedots-mark-on-dark.svg" alt="DateDots">
   <h1>DateDots</h1>
-  <p class="tagline">Alarms that follow your real schedule</p>
-  <p class="studio">A DateDot Labs app · Big Mountain Outpost</p>
-</header>
+  <p class="lede">Alarms that follow your real schedule.</p>
+  <p class="studio">DateDot Labs — a Big Mountain Outpost studio</p>
+</div>
 
-<main>
-  <h2>What is DateDots?</h2>
-  <p>Most alarm apps think in weekdays. DateDots thinks in <em>dates</em>.
-  Build routines — groups of alarms that belong together — and schedule them
-  onto the exact calendar days you need them. Every scheduled day shows a
-  color-coded dot, so one glance at the month tells you what's coming.</p>
+<hr>
 
-  <ul class="features">
-    <li><b>Calendar-first scheduling</b> — assign alarm routines to exact
-        dates, not just "every Tuesday".</li>
-    <li><b>Routines</b> — group a sequence of alarms and toggle or schedule
-        the whole set at once.</li>
-    <li><b>Timeline alarms</b> — set named alarms before and after an event
-        time, save the timeline as a template, and reuse it on any date.</li>
-    <li><b>Solo alarms</b> — classic one-time, daily, and weekday alarms.</li>
-    <li><b>Schedule import</b> — bring dates in from a spreadsheet or your
-        phone's calendar, processed entirely on your device.</li>
-    <li><b>Built to ring</b> — full-screen alarms on the lock screen, a
-        persistent banner while using other apps, and pre-alarm notifications
-        you can dismiss with one tap.</li>
-    <li><b>Optional backup &amp; sync</b> — sign in with Google to keep your
-        alarms synced across devices, or stay fully on-device.</li>
-  </ul>
+<h2>Most alarm apps think in weekdays</h2>
+<p>DateDots thinks in <strong>dates</strong>. Build routines — groups of alarms that
+belong together — and schedule them onto the exact calendar days you need them.
+Every scheduled day wears a colour-coded dot, so one glance at the month tells you
+what is coming.</p>
 
-  <div class="cta">
-    <a href="#">Coming soon to Google Play</a>
+<div class="cards">
+  <div class="card">
+    <div class="legend">
+      <i style="background:#3D7FC4"></i><i style="background:#8E5FB8"></i><i style="background:#C67A3A"></i>
+    </div>
+    <h3>Routines</h3>
+    <p>Group the alarms that belong together, give them a colour and a shape, and
+    put them on the days you actually work.</p>
   </div>
-</main>
+  <div class="card">
+    <h3>Timelines</h3>
+    <p>Work backwards from an event. Set the steps once — leave the house, shower,
+    wake up — and reuse that shape on any date.</p>
+  </div>
+  <div class="card">
+    <h3>Import a schedule</h3>
+    <p>Read a spreadsheet or your phone's calendar and turn a month of shifts into
+    routines, processed entirely on your device.</p>
+  </div>
+</div>
+
+<h2>Built to actually wake you</h2>
+<p>A full-screen alarm on the lock screen, a persistent banner while you are using
+another app so it never buries itself in the notification shade, a pre-alarm
+warning you can dismiss before it rings, and gapless looping tones. Solo alarms —
+one-time, daily, weekday — work the way you expect.</p>
+
+<h2>Yours, and optional to sync</h2>
+<p>Your alarms live on your device. Sign in with Google only if you want them
+backed up and synced across devices, and delete that copy whenever you like.</p>
+
+<p class="note">No advertising. No third-party analytics or tracking.</p>
+
+<div class="cta">
+  <span>Coming soon to Google Play</span>
+</div>
 
 <footer>
-  <p><strong>DateDot Labs</strong> — a Big Mountain Outpost studio</p>
-  <p>
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="mailto:developer@bigmountainoutpost.com">Contact</a>
-  </p>
+  <p><a href="privacy.html">Privacy</a> · <a href="delete.html">Delete your data</a> ·
+     <a href="mailto:bigmountainoutpost@gmail.com">Contact</a></p>
   <p>© 2026 Big Mountain Outpost, LLC. All rights reserved.</p>
 </footer>
 
