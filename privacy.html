@@ -15,7 +15,7 @@
 </a>
 
 <h1>DateDots — Privacy Policy</h1>
-<p class="updated">Last updated: August 6, 2026</p>
+<p class="updated">Last updated: October 6, 2026</p>
 <p>DateDots is operated by <strong>Big Mountain Outpost, LLC</strong> ("Big Mountain Outpost", "we"). This Privacy Policy explains what data the DateDots app ("DateDots", "the app") collects, how it is used, and how it is stored. By using DateDots you agree to the terms below.</p>
 
 <hr>
@@ -45,21 +45,32 @@
 <h3>1.1a Importing a schedule (spreadsheet or device calendar)</h3>
 <p>DateDots can create routines by importing a spreadsheet you choose, or by reading events from your device's calendar (with your permission; please note, this is subject to your calendar app's privacy practices and terms of use). This processing happens entirely on your device: the imported events and any names in them are used only to build the alarms you confirm, are held in memory during the import, and are <strong>not uploaded to the cloud or sold or shared</strong>. DateDots reads your calendar but never writes to or modifies it. It requests the calendar access your operating system requires in order to read events, and never adds, edits, or deletes calendar events. On some operating systems the only access level offered for reading also permits writing; DateDots does not write.</p>
 
-<h3>1.2 Data stored in the cloud (when you sign in with Google)</h3>
-<p>If you sign in to DateDots with your Google account, the same alarm, routine, timeline, calendar-date, and settings information described in §1.1 is also stored in <strong>Google Cloud Firestore</strong> under your private user document, which is keyed by your Google account ID. This sync runs through <strong>Firebase Authentication</strong> and <strong>Cloud Firestore</strong>, both operated by Google.</p>
-<p>To enable this, Google Sign-In additionally provides DateDots with:</p>
+<h3>1.2 Data stored in the cloud (when you sign in)</h3>
+<p>If you sign in to DateDots — with your <strong>Google account</strong>, or with <strong>Sign in with Apple</strong> where your device offers it — the same alarm, routine, timeline, calendar-date, and settings information described in §1.1 is also stored in <strong>Google Cloud Firestore</strong> under your private user document. That document is keyed by the account identifier <strong>Firebase Authentication</strong> issues for your DateDots account; it is not keyed by your Google or Apple identifier. This sync runs through <strong>Firebase Authentication</strong> and <strong>Cloud Firestore</strong>, both operated by Google, whichever sign-in method you use.</p>
+<p>To enable this, the sign-in service you choose passes DateDots:</p>
+<p>With <strong>Google Sign-In</strong>:</p>
 <ul>
   <li>Your Google account ID (a unique identifier).</li>
   <li>Your name as registered with Google.</li>
   <li>The email address tied to your Google account.</li>
   <li>A URL pointing to your Google profile photo, if you have one.</li>
 </ul>
+<p>With <strong>Sign in with Apple</strong>:</p>
+<ul>
+  <li>An identifier Apple issues for your Apple account to our apps.</li>
+  <li>An email address. On Apple's sign-in screen you can choose to share your real address or to hide it. If you choose <strong>Hide My Email</strong>, Apple gives us a relay address that forwards to you, and we do not receive your real address.</li>
+  <li>Your name, if you choose to share it. Apple normally provides this only on your first sign-in.</li>
+  <li>No profile photo.</li>
+</ul>
+<p><strong>Signing in with Google and signing in with Apple create two separate DateDots accounts.</strong> They are not linked or merged, even if both use the same email address, and we do not move data between them. Each has its own private user document and its own copy of your data. How DateDots Pro carries between accounts and devices is described in §1.2a. Which account you are using depends on how you signed in, not on which device you are using. Deleting an account, or requesting a copy of its data, affects only the account you are signed in to (see §5).</p>
 <p>To keep your devices in sync we also store a random identifier for each device you have signed in on, with the time it last synced, and a record of which items you have deleted (the item's type and identifier, and the time of deletion) so a device that was offline does not restore them. Both are deleted when you delete your account.</p>
-<p>Your name, email address, and profile photo URL are held by <strong>Firebase Authentication</strong> (they are not written into your Firestore content); your Google account ID identifies your private Firestore document. These four items are used only to display your account in the app's Settings screen and to identify your data. They are never sold, transferred to third-party advertising networks, or used for any purpose other than authenticating you and syncing your DateDots data.</p>
+<p>Your name and email address, and your profile photo URL if your sign-in service provides one, are held by <strong>Firebase Authentication</strong> (they are not written into your Firestore content); the Firebase account identifier identifies your private Firestore document. These items are used only to display your account in the app's Settings screen and to identify your data. They are never sold, transferred to third-party advertising networks, or used for any purpose other than authenticating you and syncing your DateDots data.</p>
 
 <h3>1.2a Purchase records (DateDots Pro)</h3>
 <p>DateDots is distributed through <strong>Google Play</strong>, the <strong>Apple App Store</strong>, and any other platform, store, or channel through which we make it available (each, a <strong>"Digital Marketplace"</strong>).</p>
-<p>If you buy <strong>DateDots Pro</strong> while signed in, our server verifies the purchase with the applicable Digital Marketplace and stores a small entitlement record in Cloud Firestore tied to your account. That record contains your Pro status and the marketplace's transaction identifiers — the <strong>order or transaction ID</strong> and a <strong>one-way hash of the purchase token or receipt</strong> — used to recognize your Pro unlock across your devices and to protect it against tampering. <strong>We never receive or store your payment-card details</strong>; the Digital Marketplace processes the payment (see §1.3). This entitlement record is deleted when you delete your account (see §5).</p>
+<p>If you buy <strong>DateDots Pro</strong> while signed in, our server verifies the purchase with the applicable Digital Marketplace and stores a small entitlement record in Cloud Firestore tied to your account. That record contains your Pro status and the marketplace's transaction identifiers — the <strong>order or transaction ID</strong> and a <strong>one-way hash of the purchase token or receipt</strong> — used to recognize your Pro unlock on other devices where you sign in to the same DateDots account, and to protect it against tampering. <strong>We never receive or store your payment-card details</strong>; the Digital Marketplace processes the payment (see §1.3). This entitlement record is deleted when you delete your account, except for the one-way hash described in §5.</p>
+<p>If you buy DateDots Pro while signed in, your purchase is linked to that DateDots account and is available wherever you sign in to it, whichever Digital Marketplace you bought it from. You can also restore a purchase with "Restore purchase" in the app, on a device signed in to the same Digital Marketplace account you bought it with.</p>
+<p>DateDots Pro granted to early supporters is available in the installation of DateDots it was granted to. When you sign in on that device, we may also record the grant against your DateDots account.</p>
 
 <h3>1.3 Data we do NOT collect</h3>
 <p>DateDots does not collect, request, or store:</p>
@@ -77,7 +88,7 @@
 <h3>1.4 Legal basis for processing (GDPR / UK GDPR)</h3>
 <p>As stated under "Geographic scope," DateDots is not offered to or directed at individuals in the EEA or the UK. If, notwithstanding the foregoing, the GDPR or UK GDPR applies to your use of DateDots, our legal bases for processing your personal data are:</p>
 <ul>
-  <li><strong>Performance of a contract</strong> — when you sign in and use cloud sync, we process your Google account identifiers and your DateDots content to provide the sync service you requested.</li>
+  <li><strong>Performance of a contract</strong> — when you sign in and use cloud sync, we process the account identifiers from your sign-in service and your DateDots content to provide the sync service you requested.</li>
   <li><strong>Consent</strong> — you choose whether to sign in at all and whether to grant the optional calendar permission; you may withdraw your consent at any time by disabling the optional feature for which consent was provided, revoking the relevant permission, or deleting your account, where applicable (see §5).</li>
   <li><strong>Legitimate interests</strong> — keeping the service secure and functioning, including maintaining the security, integrity, and reliability of DateDots, preventing unauthorized access, and enforcing per-user data isolation, balanced against your rights.</li>
 </ul>
@@ -91,11 +102,11 @@
 
 <h2>2. Who has access to your data</h2>
 <ul>
-  <li><strong>You:</strong> through the app itself and via your Google account.</li>
+  <li><strong>You:</strong> through the app itself and via the account you sign in with.</li>
   <li><strong>Google:</strong> as the operator of Firebase Authentication and Cloud Firestore, Google processes your data on our behalf. Google's own privacy practices apply to that processing — see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
   <li><strong>DateDots developer:</strong> the developer can view aggregate Firestore usage metrics through the Firebase console and does not access individual users' alarm content in the ordinary course of operating the app. The developer accesses individual content only where necessary to diagnose a problem at your request, to protect the security and integrity of the service, or to comply with law.</li>
 </ul>
-<p><strong>DateDots does not sell your personal information, and does not share your personal information with third parties for advertising, marketing, or cross-context behavioral advertising — for money or for any other valuable consideration.</strong> We have not done so in the past 12 months. The only third party that processes your data is Google, acting as our service provider to operate authentication and cloud storage as described above.</p>
+<p><strong>DateDots does not sell your personal information, and does not share your personal information with third parties for advertising, marketing, or cross-context behavioral advertising — for money or for any other valuable consideration.</strong> We have not done so in the past 12 months. Google, acting as our service provider, operates the authentication and cloud storage described above. If you use Sign in with Apple, Apple authenticates you; it does not receive your alarms, routines, or schedules.</p>
 
 <hr>
 
@@ -110,7 +121,7 @@
 
 
 <h2>4. Children's privacy</h2>
-<p>DateDots is not directed to children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect information from children. If you believe a child has signed in with their Google account, contact us at <a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a> and we will remove the associated data.</p>
+<p>DateDots is not directed to children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect information from children. If you believe a child has signed in to DateDots, contact us at <a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a> and we will remove the associated data.</p>
 
 <hr>
 
@@ -122,11 +133,11 @@
   <li><strong>Export a copy of your data</strong> (your alarms, routines, timelines, calendar assignments, and settings) to a JSON file from <strong>Settings → Export my data</strong>.</li>
   <li>Edit or delete individual alarms, groups, and calendar assignments through the app's UI; these changes propagate to the cloud copy.</li>
   <li>Sign out at any time from Settings → Account. Sign-out stops further sync but does not by itself delete cloud data.</li>
-  <li><strong>Delete your account and all cloud data at any time</strong> from Settings → Account → "Delete account &amp; data". This permanently removes your Firestore data and your authentication account. (Alarms saved on the device itself remain until you uninstall or clear the app's data.) We keep one server-side record linking a one-way hash of your purchase token to your account identifier. This prevents a single purchase from unlocking unlimited accounts. It contains no other information about you.</li>
-  <li>Alternatively, request deletion by emailing <a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a> from the Google account in question. Deletion is performed within 30 days.</li>
+  <li><strong>Delete your account and all cloud data at any time</strong> from Settings → Account → "Delete account &amp; data". This permanently removes your Firestore data and your authentication account, clears the app's data on the device you are using, and cancels the alarms it had scheduled there. It also ends this app's access to the account you signed in with: for a Google sign-in, we revoke the app's access to your Google account; for Sign in with Apple on an Apple device, DateDots asks you to authorize with Apple once more and then asks Apple to revoke this app's access — both before anything is deleted. If Apple does not accept that request, or the request cannot be made from your device (for example, on Android), the app tells you, and you can go ahead with the deletion and remove DateDots yourself on an Apple device under Settings → your name → Sign in with Apple. We keep one server-side record linking a one-way hash of your purchase token to your account identifier. This prevents a single purchase from unlocking unlimited accounts. It contains no other information about you.</li>
+  <li>Alternatively, request deletion by emailing <a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a> from the email address associated with your DateDots account. If we cannot verify your request by email — for example, where your address is an Apple <strong>Hide My Email</strong> relay address that we cannot reply to — we will ask you to complete the deletion in the app while signed in, and we may also ask you to confirm the account identifier shown in Settings → Account. Deletion is performed within 30 days.</li>
   <li>Step-by-step deletion instructions are also available on the web, without needing the app installed, at <a href="https://big-mountain-outpost.github.io/delete.html">https://big-mountain-outpost.github.io/delete.html</a>.</li>
 </ul>
-<p>Depending on where you live, additional rights may apply. You can exercise any of the rights below by emailing <strong><a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a></strong> from the Google account in question; we will verify your request through control of that account and respond within the time required by law.</p>
+<p>Depending on where you live, additional rights may apply. Most requests can be made in the app, where being signed in confirms the account: Settings → Account lets you export your data and delete your account and cloud data yourself. Otherwise, email <strong><a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a></strong> from the email address associated with your DateDots account. We verify a request by confirming control of that address. Where we cannot do that — for example, where your address is an Apple <strong>Hide My Email</strong> relay address we cannot reply to — we will ask you to complete the request in the app while signed in, and we may also ask you to confirm the account identifier shown in Settings → Account. We respond within the time required by law.</p>
 
 <h3>5.1 California residents (CCPA / CPRA)</h3>
 <p>This section supplements the rest of this Privacy Policy and applies solely to California consumers. Terms used but not defined have the meaning given to them in the California Consumer Privacy Act, as amended by the California Privacy Rights Act ("CCPA"). It does not apply to personal information we process on behalf of a business customer, or that we collect from job applicants, contractors, or employees.</p>
@@ -136,10 +147,10 @@
 <table>
 <thead><tr><th>Category</th><th>Collected</th><th>Disclosed for a business purpose</th><th>Sold or shared</th></tr></thead>
 <tbody>
-<tr><td><strong>Identifiers</strong> — Google account ID, name, email address, Google profile photo URL, Firebase installation identifier</td><td>Yes</td><td>Yes — to Google</td><td><strong>No</strong></td></tr>
+<tr><td><strong>Identifiers</strong> — the account identifier issued by Firebase Authentication; the identifier provided by your sign-in service (a Google account ID, or an Apple identifier issued for our apps); name; email address (which may be an Apple <strong>Hide My Email</strong> relay address); Google profile photo URL (Google sign-in only); Firebase installation identifier</td><td>Yes</td><td>Yes — to Google; and to Apple when we ask it to revoke this app's access at your request</td><td><strong>No</strong></td></tr>
 <tr><td><strong>California customer records information</strong> — name and email address (we hold <strong>no</strong> financial account or payment-card information)</td><td>Yes</td><td>Yes — to Google</td><td><strong>No</strong></td></tr>
 <tr><td><strong>Protected classifications</strong> — age, gender, marital status, and similar</td><td>No</td><td>No</td><td><strong>No</strong></td></tr>
-<tr><td><strong>Commercial information</strong> — DateDots Pro entitlement status and the Digital Marketplace's transaction identifiers (order or transaction ID, purchase token or receipt)</td><td>Yes</td><td>Yes — to Google and the applicable Digital Marketplace</td><td><strong>No</strong></td></tr>
+<tr><td><strong>Commercial information</strong> — DateDots Pro entitlement status and the Digital Marketplace's transaction identifiers (order or transaction ID; the purchase token or receipt, which is received to verify the purchase and of which only a one-way hash is stored)</td><td>Yes</td><td>Yes — to Google and the applicable Digital Marketplace</td><td><strong>No</strong></td></tr>
 <tr><td><strong>Biometric information</strong></td><td>No</td><td>No</td><td><strong>No</strong></td></tr>
 <tr><td><strong>Internet or network activity</strong> — browsing history, search history, interactions with advertisements</td><td>No</td><td>No</td><td><strong>No</strong></td></tr>
 <tr><td><strong>Geolocation data</strong></td><td>No</td><td>No</td><td><strong>No</strong></td></tr>
@@ -149,14 +160,14 @@
 <tr><td><strong>Inferences or profiles</strong></td><td>No</td><td>No</td><td><strong>No</strong></td></tr>
 </tbody>
 </table>
-<p>We do <strong>not</strong> collect sensitive personal information as defined by the CPRA. We do not hold your Google password or other account credentials — authentication is performed by Google.</p>
+<p>We do <strong>not</strong> collect sensitive personal information as defined by the CPRA. We do not hold your Google or Apple password or other account credentials — authentication is performed by Google or by Apple.</p>
 <p>Your alarms, routines, timelines, calendar dates, and settings are content you create. When you sign in, they are stored under your private user document as described in §1.2. They are not used to build a profile of you and are not disclosed to anyone other than Google as our service provider.</p>
 
 <h4>Sources, purposes, and recipients</h4>
 <ul>
-  <li><strong>Sources.</strong> Directly from you when you use the app, and from Google when you choose to sign in or make a purchase. We do not buy personal information, and we do not obtain it from data brokers, advertising networks, or public records.</li>
+  <li><strong>Sources.</strong> Directly from you when you use the app; from Google or Apple when you choose to sign in; and from the applicable Digital Marketplace when you make a purchase. We do not buy personal information, and we do not obtain it from data brokers, advertising networks, or public records.</li>
   <li><strong>Business purposes.</strong> To provide the app and its optional cloud sync, to verify and restore a DateDots Pro purchase, to keep the service secure and enforce per-user data isolation, and to comply with law.</li>
-  <li><strong>Recipients.</strong> Google only, acting as our service provider (Firebase Authentication, Cloud Firestore) and the applicable Digital Marketplace's billing service (such as Google Play Billing or Apple In-App Purchase). We do not disclose personal information to advertising networks, data analytics providers, data brokers, or social networks.</li>
+  <li><strong>Recipients.</strong> Google, acting as our service provider (Firebase Authentication, Cloud Firestore); Apple, if you choose Sign in with Apple, which authenticates you, relays your email address if you use Hide My Email, and receives a request to revoke this app's access when you delete your account; and the applicable Digital Marketplace's billing service (such as Google Play Billing or Apple In-App Purchase). Your alarms, routines, timelines, calendar dates, and settings are received only by Google. We do not disclose personal information to advertising networks, data analytics providers, data brokers, or social networks.</li>
 </ul>
 
 <h4>Sale and sharing</h4>
@@ -164,7 +175,7 @@
 <p>We do not knowingly sell or share the personal information of consumers under 16 years of age.</p>
 
 <h4>Retention</h4>
-<p>We retain personal information only as long as needed for the purposes above. Deleting an item in the app deletes its stored copy, and deleting your account removes your cloud data and your entitlement record — see §3 and §5.</p>
+<p>We retain personal information only as long as needed for the purposes above. Deleting an item in the app deletes its stored copy, and deleting your account removes your cloud data and your entitlement record, except for the one-way hash of your purchase token described in §5 — see §3 and §5.</p>
 
 <h4>Your California rights</h4>
 <ul>
@@ -179,7 +190,7 @@
 <h4>How to make a request</h4>
 <p>Most requests can be handled in the app: <strong>Settings → Account</strong> lets you export your data and delete your account and cloud data yourself, without contacting us.</p>
 <p>Otherwise, email <strong><a href="mailto:bigmountainoutpost@gmail.com">bigmountainoutpost@gmail.com</a></strong> from the email address associated with your DateDots account.</p>
-<p>To verify your identity we will only ask you to confirm control of that email address, and we may ask you to sign in to the app. <strong>We will never ask you for a Social Security number, driver's licence number, or date of birth</strong> — we do not hold that information and do not need it to locate your data. If we cannot connect your request to information we hold, we may be unable to comply. You may use an authorized agent, subject to proof of identity and written authorization.</p>
+<p>To verify your identity we will ask you to confirm control of that email address. Where we cannot, we will ask you to complete the request in the app while signed in, and we may ask you to confirm the account identifier shown in Settings → Account. <strong>We will never ask you for a Social Security number, driver's licence number, or date of birth</strong> — we do not hold that information and do not need it to locate your data. If we cannot connect your request to information we hold, we may be unable to comply. You may use an authorized agent, subject to proof of identity and written authorization.</p>
 <p>We respond consistent with the CCPA, which does not apply to certain information — for example, information subject to the Fair Credit Reporting Act or the Gramm-Leach-Bliley Act, or where its application is preempted by or in conflict with federal law or the United States or California Constitution.</p>
 
 <h3>5.2 EEA / UK / Switzerland residents (GDPR / UK GDPR / FADP)</h3>
